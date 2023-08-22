@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1 class="mb-4">My Articles</h1>
+
+  <% @articles.each do |article| %>
+    <div class="d-flex align-items-center mb-2 m-2">
+      <div class="m-1 gap-10 d-flex align-items-center">
+        <%= link_to article.title, article_path(article), class: 'text-dark' %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= link_to "Add New Article", new_article_path, class: 'btn btn-primary' %>
+</div>
